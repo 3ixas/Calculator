@@ -1,79 +1,118 @@
-// :root {
-//   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-//   line-height: 1.5;
-//   font-weight: 400;
-
-//   color-scheme: light dark;
-//   color: rgba(255, 255, 255, 0.87);
-//   background-color: #242424;
-
-//   font-synthesis: none;
-//   text-rendering: optimizeLegibility;
-//   -webkit-font-smoothing: antialiased;
-//   -moz-osx-font-smoothing: grayscale;
-// }
-
+// Styling for the body
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #f4f4f4;
+  background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  color: white;
 }
 
+// Styling for the page background
+.page-background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  height: 100vh;
+  width: 100vw;
+}
+
+// Styling for the iphone-style frame
+.iphone-frame {
+  background: #000000;
+  width: 360px;
+  height: 740px;
+  border-radius: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+// Styling the calculator container
 #calculator-app {
-  background: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  border-radius: 10px;
   overflow: hidden;
-  width: 300px;
 
-  .calculator__display {
-    background: #333333;
-    color: #ffffff;
-    font-size: 2.5rem;
-    padding: 20px;
-    text-align: right;
-    height: 60px;
+  .calculator {
     display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    overflow: hidden;
-  }
+    flex-direction: column;
 
-  .calculator__buttons {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1px;
-    background: #dddddd;
-
-    .btn {
-      background: #f9f9f9f9;
-      border: none;
-      font-size: 1.5rem;
+    // Styling for the number display
+    .calculator__display {
+      background: #000000;
+      color: white;
+      font-size: 4rem;
+      text-align: right;
       padding: 20px;
-      cursor: pointer;
-      transition: background 0.2s ease;
-
-      &:hover {
-        background: #e0e0e0e0;
-      }
-
-      &:active {
-        background: #cccccc;
-      }
+      height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      // box-shadow: inset 0 -1px 2px rgba(255, 255, 255, 0.1);
     }
 
-    #clear {
-      background: #ff4d4d;
-      color: white;
-      grid-column: span 4;
-      font-size: 1.2rem;
+    // Styling for the buttons grid
+    .calculator__buttons {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      padding: 10px;
+      background: #000000;
 
-      &:hover {
-        background: #ff1a1a;
+      // Styling for buttons
+      .btn {
+        border: none;
+        border-radius: 50%;
+        font-size: 1.5rem;
+        padding: 20px;
+        cursor: pointer;
+        text-align: center;
+        transition: background 0.2s ease, transform 0.1s ease;
+
+        // Slightly enlarge buttons when hovering over them
+        &:hover {
+          transform: scale(1.1);
+        }
+
+        // Slightly shrink buttons when clicked
+        &:active {
+          transform: scale(0.95);
+        }
+      }
+
+      // Styling for number buttons
+      .number-btn {
+        background: #333333;
+        color: white;
+      }
+
+      // Styling for the zero button
+      .zero-btn {
+        grid-column: span 2;
+        border-radius: 50px;
+      }
+
+      // Styling for function buttons
+      .function-btn {
+        background: #a5a5a5a5;
+        color: black;
+      }
+
+      // Styling for operator buttons
+      .operator-btn {
+        background: #ff9f0a;
+        color: white;
       }
     }
   }
