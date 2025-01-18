@@ -44,3 +44,11 @@
     -   [ ] not allowing two operators in a row
     -   [ ] we will need to handle a fresh input after the equal has been pressed
 -   [ ] all my functions should handle error state
+
+## Known Bugs
+
+-   When Tapping numbers multiple times, the buttons expand and the calculator is not useable. The page needs to be refreshed.
+
+## Upcoming features
+
+-   Scrolling display window that shows the calculation as being typed out, like on the ios calculator app
